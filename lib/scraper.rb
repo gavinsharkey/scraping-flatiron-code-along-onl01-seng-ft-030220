@@ -12,12 +12,13 @@ class Scraper
 
   def get_courses
     doc = self.get_page
-    binding.pry
-    doc.css('.posts-holder')
+    doc.css('.post')
   end
 
   def make_courses
-    nil
+    self.get_courses.each do |info|
+      binding.pry
+    end
   end
 
   def print_courses
