@@ -13,6 +13,7 @@ class Scraper
   def get_courses
     doc = self.get_page
     doc.css('.posts-holder')
+    binding.pry
   end
 
   def make_courses
