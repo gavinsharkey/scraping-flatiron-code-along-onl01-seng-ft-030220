@@ -22,7 +22,6 @@ class Scraper
       course.schedule = info.css('.date').text
       course.description = info.css('p').text
     end
-    binding.pry
   end
 
   def print_courses
