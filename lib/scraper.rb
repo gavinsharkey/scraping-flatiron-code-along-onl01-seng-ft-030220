@@ -16,7 +16,7 @@ class Scraper
   end
 
   def make_courses
-    self.get_courses.each do |info|
+    self.get_courses.children.each do |info|
       binding.pry
     end
   end
