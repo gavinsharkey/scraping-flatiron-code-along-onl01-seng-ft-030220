@@ -17,7 +17,10 @@ class Scraper
 
   def make_courses
     self.get_courses.each do |info|
-      binding.pry
+      course = Course.new
+      course.title = info.css('h2').text
+      course.schedule = info.css('.date').text
+      course.description = info.css('p').text
     end
   end
 
